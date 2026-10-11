@@ -65,20 +65,29 @@ body {
   font-size: 1.2rem;
   color: #ccc;
   line-height: 1.2;
+  min-height: 1.2em; /* 沒有時間時仍保留這一列，讓事件文字對齊同一行 */
 }
 
 .timeline-item {
   flex: 1;
   text-align: center;
   position: relative;
+  padding: 0 8px;
 }
 
 .timeline-item .event {
   font-size: 1.3rem;
   margin-top: 8px;
+  white-space: pre; /* 只在文字中指定的位置換行 */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
+  .timeline-item .event {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1024px) {
   .timeline-horizontal {
     flex-direction: column;
     align-items: flex-start;
@@ -93,6 +102,13 @@ body {
     text-align: left;
     margin-bottom: 20px;
     position: relative;
+    padding: 0;
+  }
+  .timeline-item .event {
+    white-space: pre-line;
+  }
+  .date-block .time:empty {
+    display: none;
   }
   .timeline-dot {
     position: absolute;
@@ -385,7 +401,7 @@ footer {
 .cards-row {
   display: flex;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -765,6 +781,99 @@ footer {
   font-weight: 700;
   color: #fff;
 }
+
+/* ==========================================================================
+   初賽截止倒數計時
+   ========================================================================== */
+
+.countdown-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.countdown-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: cyan;
+  margin-bottom: 10px;
+}
+
+.countdown-subtitle {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  margin-bottom: 25px;
+}
+
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.countdown-unit {
+  min-width: 130px;
+  padding: 20px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.countdown-value {
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 18px rgba(0, 255, 255, 0.45);
+}
+
+.countdown-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: cyan;
+  letter-spacing: 2px;
+}
+
+.countdown-closed {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ff69b4;
+}
+
+@media (max-width: 768px) {
+  .countdown-title {
+    font-size: 2rem;
+  }
+  .countdown-subtitle {
+    font-size: 1rem;
+  }
+  .countdown-grid {
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+  .countdown-unit {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 6px 12px;
+    border-radius: 14px;
+  }
+  .countdown-value {
+    font-size: 2.2rem;
+  }
+  .countdown-label {
+    font-size: 0.95rem;
+  }
+}
+
 .photo-carousel-wrapper {
   max-width: 1200px;
   margin: 40px auto 50px auto;

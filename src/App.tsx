@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import { PhotoCarousel2025 } from "./components/PhotoCarousel2025";
+import { DeadlineCountdown } from "./components/DeadlineCountdown";
 import {
   REGISTRATION_URL,
   RULES_PDF_URL,
@@ -47,17 +48,18 @@ const TimelineSection = () => (
       {[
         { date: "10/15", time: "", text: "開放報名" },
         { date: "11/30", time: "23:59", text: "報名與初賽檔案繳交截止" },
-        { date: "12/2", time: "", text: "決賽入選名單公告（寄信通知）" },
+        { date: "12/2", time: "", text: "決賽入選名單公告\n（寄信通知）" },
         { date: "12/5", time: "19:00", text: "競賽工作坊" },
         { date: "12/25", time: "23:59", text: "決賽資料繳件截止" },
-        { date: "12/27", time: "11:30", text: "決賽暨頒獎典禮" },
+        { date: "12/27", time: "13:00", text: "決賽暨頒獎典禮" },
       ].map((item, idx) => (
         <div className="timeline-item" key={idx}>
           <div className="timeline-dot" />
           <div className="timeline-content">
             <div className="date-block">
               <div className="day">{item.date}</div>
-              {item.time && <div className="time">{item.time}</div>}
+              {/* 沒有時間也保留空白列，讓所有事件文字對齊同一行 */}
+              <div className="time">{item.time}</div>
             </div>
             <p className="event">{item.text}</p>
           </div>
@@ -95,7 +97,7 @@ const Rules1Section = () => (
       <div className="section">
         <h4>一、流程</h4>
         <ul>
-          <li>請先線上報名競賽再繳交初賽申請書</li>
+          <li>請線上報名競賽時繳交初賽資料</li>
           <li>申請書截止日期為 11/30 23:59，檔案規範如最下面開啟文件</li>
           <li>主辦收到報名資料後即會回信通知</li>
           <li>決賽公告時間：12/2 前寄信通知並公布名單</li>
@@ -242,11 +244,9 @@ const WorkshopSection = () => (
 
     <div className="info-box">
       <p>🕒 <b>時間：</b>2026/12/05 (五) 19:00–21:00</p>
-      <p>📍 <b>地點：</b>待定</p>
+      <p>📍 <b>地點：</b>Google Meet 線上</p>
       <p>⚠️ <b>注意：</b>每隊須至少派員一人完成簽到，未到視同棄權</p>
     </div>
-
-    <p className="note" style={{ marginTop: "20px" }}>📺 * 當天錄影會公告於決賽行前說明，供團隊複習</p>
   </div>
 );
 
@@ -267,7 +267,7 @@ const PrizeSection = () => (
           <td>第一名</td>
           <td>NT$ 20,000</td>
           <td>1 組</td>
-          <td>獎狀每人乙紙、專題報導與推薦</td>
+          <td>獎狀每人乙紙</td>
         </tr>
         <tr>
           <td>第二名</td>
@@ -451,6 +451,9 @@ function App() {
           </div>
         </section>
       </div>
+
+      {/* 初賽截止倒數計時 */}
+      <DeadlineCountdown />
 
       {/* 2025 精彩回顧照片輪播 */}
       <PhotoCarousel2025 />
