@@ -49,7 +49,7 @@ const TimelineSection = () => (
         { date: "10/15", time: "", text: "開放報名" },
         { date: "11/30", time: "23:59", text: "報名與初賽檔案繳交截止" },
         { date: "12/2", time: "", text: "決賽入選名單公告\n（寄信通知）" },
-        { date: "12/5", time: "19:00", text: "競賽工作坊" },
+        { date: "12/6", time: "19:00", text: "競賽工作坊" },
         { date: "12/25", time: "23:59", text: "決賽資料繳件截止" },
         { date: "12/27", time: "13:00", text: "決賽暨頒獎典禮" },
       ].map((item, idx) => (
@@ -192,7 +192,7 @@ const Rules1Section = () => (
       <div className="card fade-in">
         <h4>一、說明會與工作坊參與</h4>
         <p style={{ marginBottom: "10px" }}>
-          入選決賽團隊須參與 12/5 實體或線上工作坊（每隊須至少一人簽到出席）：
+          入選決賽團隊須參與 12/6 線上工作坊（每隊須至少一人簽到出席）：
         </p>
         <ul>
           <li>實作技術支援（生成式 AI 工具、無程式工具、API 使用說明）</li>
@@ -243,7 +243,7 @@ const WorkshopSection = () => (
     </p>
 
     <div className="info-box">
-      <p>🕒 <b>時間：</b>2026/12/05 (五) 19:00–21:00</p>
+      <p>🕒 <b>時間：</b>2026/12/06 (日) 19:00–21:00</p>
       <p>📍 <b>地點：</b>Google Meet 線上</p>
       <p>⚠️ <b>注意：</b>每隊須至少派員一人完成簽到，未到視同棄權</p>
     </div>
@@ -310,10 +310,10 @@ const PrizeSection = () => (
 const notifications = [
   { date: "2026/10/15", text: "NextWave：AI法創黑客松正式開放線上報名！" },
   { date: "2026/10/15", text: "官方競賽簡章與線上提案書規範已開放查閱，請參賽隊伍詳閱規範。" },
-  { date: "2026/10/15", text: "初賽企劃書繳件截止時間為 11/30 (日) 23:59，逾期不予受理。" },
+  { date: "2026/10/15", text: "初賽企劃書繳件截止時間為 11/30 (一) 23:59，逾期不予受理。" },
   { date: "2026/10/15", text: "若無指導老師，提案書之指導老師欄位可不填。" },
-  { date: "2026/10/15", text: "決賽名單將於 12/2 (二) 公告並寄信通知入選團隊。" },
-  { date: "2026/10/15", text: "決賽增能工作坊將於 12/5 (五) 19:00 舉行，每隊須派代表簽到。" },
+  { date: "2026/10/15", text: "決賽名單將於 12/2 (三) 公告並寄信通知入選團隊。" },
+  { date: "2026/10/15", text: "決賽增能工作坊將於 12/6 (日) 19:00 舉行，每隊須派代表簽到。" },
 ];
 
 const NotificationSection = () => (
@@ -464,6 +464,7 @@ function App() {
           style={{
             backgroundColor: "rgb(34, 59, 80)",
             width: "100%",
+            boxSizing: "border-box",
             height: "70px",
             position: "fixed",
             top: 0,
