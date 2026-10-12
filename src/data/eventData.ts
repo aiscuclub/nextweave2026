@@ -15,7 +15,7 @@ export const PROPOSAL_ODT_URL = `${BASE}2026年NextWave競賽提案書.odt`;
 // 初賽（報名與初賽檔案繳交）截止時間，以台灣時間計算
 export const PRELIM_DEADLINE = new Date("2026-11-30T23:59:59+08:00");
 
-// 2025 精彩回顧照片清單 (共 20 張優化代表照片)
+// 2025 精彩回顧照片清單 (共 19 張優化代表照片)
 export interface RetrospectivePhoto {
   id: number;
   filename: string;
@@ -24,7 +24,7 @@ export interface RetrospectivePhoto {
 }
 
 export const RETROSPECTIVE_PHOTOS: RetrospectivePhoto[] = Array.from(
-  { length: 20 },
+  { length: 19 },
   (_, i) => {
     const numStr = String(i + 1).padStart(2, "0");
     return {
