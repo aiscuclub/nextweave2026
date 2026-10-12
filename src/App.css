@@ -535,7 +535,7 @@ footer {
 .hero-top {
   position: relative;
   height: 100vh;
-  background: url("./assets/image/hero.png") no-repeat center center;
+  background: url("./assets/image/hero.jpg") no-repeat center center;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -553,7 +553,7 @@ footer {
     margin-top: 70px;
     background: linear-gradient(to top, #11303a, #11303a00 20%),
                 linear-gradient(to bottom, #11303a, #11303a00 20%),
-                url("./assets/image/hero.png") no-repeat center top;
+                url("./assets/image/hero.jpg") no-repeat center top;
     background-size: 100% auto;
     background-repeat: no-repeat;
   }
