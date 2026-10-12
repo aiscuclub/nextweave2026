@@ -377,7 +377,6 @@ const ContactSection = () => (
   <div id="contact" className="card fade-in" style={{ padding: "20px", textAlign: "center", maxWidth: "100%" }}>
     <p style={{ fontSize: "2rem", margin: "10px 0" }}>東吳大學 人工智慧應用社</p>
     <p style={{ fontSize: "2rem", margin: "10px 0" }}>Email : ai.scu.club@gmail.com</p>
-    <p style={{ fontSize: "1.5rem", margin: "10px 0" }}>電話 : 0906-831-267</p>
     <p style={{ fontSize: "1.3rem", margin: "10px 0", color: "#aaa" }}>地址 : 台北市中正區貴陽街一段 56 號</p>
     <p style={{ fontSize: "1.5rem", margin: "10px 0" }}>有任何疑問歡迎來信詢問 !</p>
   </div>
