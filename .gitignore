@@ -10,8 +10,8 @@ lerna-debug.log*
 # Dependencies
 node_modules/
 
-# 保留 dist，因為要部署到 GitHub Pages
-# dist-ssr/ 可忽略
+# Build output（由 GitHub Actions 建置部署，不需提交）
+dist/
 dist-ssr/
 
 # Local env files
