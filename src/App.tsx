@@ -9,7 +9,6 @@ import {
 } from "./data/eventData";
 import tlfLogo from "./assets/image/TLF_Logo1.png";
 import hcLogo from "./assets/image/HC_Logo1.png";
-import aiscuLogo from "./assets/image/AISCU_Logo1.png";
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
@@ -362,11 +361,6 @@ const OrgSection = () => (
       <img
         src={hcLogo}
         alt="東吳大學人本AI研究中心"
-        style={{ maxWidth: "100%", width: "400px", height: "auto", objectFit: "contain" }}
-      />
-      <img
-        src={aiscuLogo}
-        alt="東吳大學人工智慧應用社"
         style={{ maxWidth: "100%", width: "400px", height: "auto", objectFit: "contain" }}
       />
     </div>
