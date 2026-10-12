@@ -342,7 +342,7 @@ const NotificationSection = () => (
 
 const OrgSection = () => (
   <div id="org" className="card fade-in" style={{ backgroundColor: "rgba(0,0,0,0.4)", padding: "20px" }}>
-    <h3 style={{ textAlign: "center", fontSize: "2rem", marginBottom: "40px" }}>合作單位</h3>
+    <h3 style={{ textAlign: "center", fontSize: "2rem", marginBottom: "40px" }}>協辦單位</h3>
     <div
       id="org-logos"
       style={{
@@ -403,7 +403,7 @@ function App() {
     { id: "workshop", label: "決賽工作坊" },
     { id: "prize", label: "獎金名次" },
     { id: "notification", label: "重要公告" },
-    { id: "org", label: "合作單位" },
+    { id: "org", label: "協辦單位" },
     { id: "contact", label: "主辦聯絡資訊" },
   ];
 
