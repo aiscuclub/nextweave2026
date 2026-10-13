@@ -50,7 +50,7 @@ const TimelineSection = () => (
         { date: "12/2", time: "", text: "決賽入選名單公告\n（寄信通知）" },
         { date: "12/6", time: "19:00", text: "競賽工作坊" },
         { date: "12/25", time: "23:59", text: "決賽資料繳件截止" },
-        { date: "12/27", time: "13:00", text: "決賽暨頒獎典禮" },
+        { date: "12/27", time: "13:00-19:00", text: "決賽暨頒獎典禮" },
       ].map((item, idx) => (
         <div className="timeline-item" key={idx}>
           <div className="timeline-dot" />
