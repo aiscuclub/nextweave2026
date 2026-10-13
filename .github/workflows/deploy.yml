@@ -1,4 +1,4 @@
-# 每次推送到 main 自動建置並部署到 GitHub Pages
+# 每次推送到 main 自動建置並部署到 GitHub Pages（fork 到其他帳號也適用）
 # 需在 Settings → Pages → Build and deployment → Source 選擇「GitHub Actions」
 name: Deploy to GitHub Pages
 
@@ -26,7 +26,13 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - id: pages
+        uses: actions/configure-pages@v5
+      # 依目前帳號與 repo 名稱產生網址，fork 到其他帳號也能直接部署
       - run: npm run build
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}/
+          VITE_SITE_URL: ${{ steps.pages.outputs.base_url }}/
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
